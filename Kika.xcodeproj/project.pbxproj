@@ -16,6 +16,7 @@
 		ECC9F2562C7D4F4400EBF409 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC9F2552C7D4F4400EBF409 /* SettingsView.swift */; };
 		ECCE914D2C7D50D700EA8E7F /* WakeUpChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCE914C2C7D50D700EA8E7F /* WakeUpChallenge.swift */; };
 		ECCE91512C7D57EB00EA8E7F /* NewAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCE91502C7D57EB00EA8E7F /* NewAlarmView.swift */; };
+		ECCE91532C7EB0D100EA8E7F /* AlarmRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCE91522C7EB0D100EA8E7F /* AlarmRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		ECC9F2552C7D4F4400EBF409 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ECCE914C2C7D50D700EA8E7F /* WakeUpChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeUpChallenge.swift; sourceTree = "<group>"; };
 		ECCE91502C7D57EB00EA8E7F /* NewAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlarmView.swift; sourceTree = "<group>"; };
+		ECCE91522C7EB0D100EA8E7F /* AlarmRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				ECC9F2532C7D4F3400EBF409 /* AlarmListView.swift */,
 				ECC9F2552C7D4F4400EBF409 /* SettingsView.swift */,
 				ECCE91502C7D57EB00EA8E7F /* NewAlarmView.swift */,
+				ECCE91522C7EB0D100EA8E7F /* AlarmRow.swift */,
 				ECC9F2482C7D4CE900EBF409 /* Assets.xcassets */,
 				ECC9F24A2C7D4CE900EBF409 /* Preview Content */,
 			);
@@ -166,6 +169,7 @@
 				ECCE91512C7D57EB00EA8E7F /* NewAlarmView.swift in Sources */,
 				ECC9F2472C7D4CE800EBF409 /* Alarm.swift in Sources */,
 				ECC9F2542C7D4F3400EBF409 /* AlarmListView.swift in Sources */,
+				ECCE91532C7EB0D100EA8E7F /* AlarmRow.swift in Sources */,
 				ECC9F2432C7D4CE800EBF409 /* KikaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

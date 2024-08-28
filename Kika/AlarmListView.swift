@@ -1,7 +1,10 @@
 import SwiftUI
+import SwiftData
 
 struct AlarmListView: View {
-    @State private var alarms: [Alarm] = []
+    @Environment(\.modelContext) private var modelContext
+    
+    @Query private var alarms: [Alarm]
     @State private var showingAddAlarm = false
     
     var body: some View {
@@ -9,11 +12,14 @@ struct AlarmListView: View {
             Group {
                 if alarms.isEmpty {
                     VStack {
-                        Image(.yoga)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding()
-                            .frame(width: 280)
+//                        Image(.yoga)
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                            .padding()
+//                            .frame(width: 280)
+//                            .padding(.bottom, 16)
+                        Image(systemName: "bell.slash.fill")
+                            .font(.system(size: 64))
                             .padding(.bottom, 16)
                         Text("Not much going on here...")
                             .foregroundColor(.gray)
@@ -29,8 +35,11 @@ struct AlarmListView: View {
                         }
                     }
                 } else {
-                    List(alarms) { alarm in
-                        Image(systemName: "clock")
+                    List {
+                        ForEach(alarms) { alarm in
+                            AlarmRow(alarm: alarm)
+                        }
+                        .onDelete(perform: deleteAlarms)
                     }
                 }
             }
@@ -44,6 +53,14 @@ struct AlarmListView: View {
         }
         .sheet(isPresented: $showingAddAlarm) {
             NewAlarmView()
+        }
+    }
+    
+    private func deleteAlarms(offsets: IndexSet) {
+        withAnimation {
+            for index in offsets {
+                modelContext.delete(alarms[index])
+            }
         }
     }
 }
